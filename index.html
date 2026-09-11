@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f7">
+  <meta name="description" content="Un detalle especial de Cristhofer para Nicole.">
+  <title>Para Nicole ❤️</title>
+
+  <!-- IMPORTANTE PARA GITHUB PAGES:
+       Todas las rutas son relativas. No cambies "./css/..." por "/css/...". -->
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <noscript>
+    <div class="noscript">Activa JavaScript para ver toda la sorpresa ❤️</div>
+  </noscript>
+
+  <!-- Fondo / efectos -->
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div id="floatingHearts" class="floating-hearts" aria-hidden="true"></div>
+
+  <!-- ================= INTRO ================= -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-aurora aurora-one"></div>
+    <div class="intro-aurora aurora-two"></div>
+
+    <div class="intro-card">
+      <span class="intro-mini-heart">♥</span>
+      <p class="eyebrow">Una pequeña sorpresa preparada con amor</p>
+
+      <h1 class="intro-title">Para Nicole</h1>
+
+      <p class="intro-subtitle">
+        Hay cosas que se dicen con palabras… y otras que merecen un lugar entero.
+      </p>
+
+      <button class="primary-btn magnetic" id="enterBtn">
+        <span>Abrir mi sorpresa</span>
+        <span class="btn-heart">♥</span>
+      </button>
+
+      <p class="intro-note">De Cristhofer, para ti ✨</p>
+    </div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="topbar" id="topbar">
+    <a href="#inicio" class="brand">C <span>♥</span> N</a>
+
+    <nav class="nav">
+      <a href="#historia">Nosotros</a>
+      <a href="#galeria">Recuerdos</a>
+      <a href="#carta">Carta</a>
+      <a href="#final">Final</a>
+    </nav>
+
+    <button class="music-toggle" id="musicToggle" aria-label="Reproducir o pausar música">
+      <span class="music-icon">♫</span>
+      <span id="musicLabel">Música</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow reveal">Cristhofer & Nicole</p>
+
+        <h2 class="hero-title reveal delay-1">
+          Mi lugar favorito
+          <span>siempre será contigo.</span>
+        </h2>
+
+        <p class="hero-text reveal delay-2">
+          Hice esta página solo para ti, para guardar un pedacito de lo que siento
+          y recordarte que hasta los días más simples se vuelven especiales cuando estás tú.
+        </p>
+
+        <div class="hero-actions reveal delay-3">
+          <a href="#historia" class="primary-btn magnetic">Empezar a verla ♥</a>
+          <button class="ghost-btn" id="secretBtn">Tengo un secreto ✨</button>
+        </div>
+
+        <div class="scroll-cue reveal delay-4">
+          <span>Desliza</span>
+          <div class="mouse"><span></span></div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal delay-2">
+        <div class="polaroid polaroid-main parallax-card" data-speed="0.05">
+          <div class="image-frame">
+            <img src="./assets/images/snoopy-portada.svg" alt="Reemplaza esta imagen por tu Snoopy de portada">
+          </div>
+          <p>“Tú haces bonito mi mundo.”</p>
+          <span>para Nicole ♡</span>
+        </div>
+
+        <div class="mini-card mini-card-one">♥</div>
+        <div class="mini-card mini-card-two">N</div>
+        <div class="spark spark-1">✦</div>
+        <div class="spark spark-2">✧</div>
+        <div class="spark spark-3">♥</div>
+      </div>
+    </section>
+
+    <!-- ================= COUNTER ================= -->
+    <section class="counter-section section-pad" id="historia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nuestra historia</p>
+        <h2>Todo este tiempo eligiéndonos</h2>
+        <p>
+          Cambia la fecha en <strong>js/app.js</strong> y el contador calculará automáticamente
+          cuánto tiempo llevan juntos.
+        </p>
+      </div>
+
+      <div class="counter-grid reveal delay-1">
+        <div class="counter-card">
+          <strong id="days">0</strong>
+          <span>días</span>
+        </div>
+        <div class="counter-card">
+          <strong id="hours">00</strong>
+          <span>horas</span>
+        </div>
+        <div class="counter-card">
+          <strong id="minutes">00</strong>
+          <span>minutos</span>
+        </div>
+        <div class="counter-card">
+          <strong id="seconds">00</strong>
+          <span>segundos</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div>
+            <small>Capítulo 01</small>
+            <h3>Cuando todo comenzó</h3>
+            <p>
+              Entre millones de coincidencias, apareciste tú. Y poco a poco te convertiste
+              en una de mis personas favoritas.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div>
+            <small>Capítulo 02</small>
+            <h3>Los pequeños momentos</h3>
+            <p>
+              Las conversaciones, las risas, los detalles inesperados y esos instantes
+              que parecen normales, pero que contigo se sienten distintos.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div>
+            <small>Capítulo 03</small>
+            <h3>Todo lo que falta</h3>
+            <p>
+              Esta no es una página para mirar hacia atrás solamente. También es una promesa
+              de todas las fotografías, lugares y aventuras que todavía nos faltan.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= QUOTE ================= -->
+    <section class="quote-break">
+      <div class="quote-bg-word">LOVE</div>
+      <div class="quote-content reveal">
+        <span class="big-quote">“</span>
+        <blockquote>
+          Si me preguntaran cuál es mi lugar favorito, no diría una ciudad ni un paisaje.
+          Diría cualquier lugar en el que estés tú.
+        </blockquote>
+        <p>— Cristhofer</p>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery-section section-pad" id="galeria">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Un pedacito de nosotros</p>
+        <h2>Recuerdos que quiero guardar</h2>
+        <p>
+          Reemplaza estas imágenes por sus fotos manteniendo los mismos nombres,
+          o cambia las rutas directamente en <strong>index.html</strong>.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item tall reveal">
+          <img src="./assets/photos/foto-1.svg" alt="Foto 1 de Nicole y Cristhofer">
+          <figcaption>Un momento que volvería a vivir mil veces.</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal delay-1">
+          <img src="./assets/photos/foto-2.svg" alt="Foto 2 de Nicole y Cristhofer">
+          <figcaption>Tu sonrisa, mi debilidad.</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal delay-2">
+          <img src="./assets/photos/foto-3.svg" alt="Foto 3 de Nicole y Cristhofer">
+          <figcaption>Nosotros siendo nosotros.</figcaption>
+        </figure>
+
+        <figure class="gallery-item wide reveal">
+          <img src="./assets/photos/foto-4.svg" alt="Foto 4 de Nicole y Cristhofer">
+          <figcaption>Otro recuerdo para nuestra colección.</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal delay-1">
+          <img src="./assets/photos/foto-5.svg" alt="Foto 5 de Nicole y Cristhofer">
+          <figcaption>Contigo, hasta lo simple es especial.</figcaption>
+        </figure>
+
+        <figure class="gallery-item tall reveal delay-2">
+          <img src="./assets/photos/foto-6.svg" alt="Foto 6 de Nicole y Cristhofer">
+          <figcaption>Y todavía nos faltan muchísimas fotos.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= REASONS ================= -->
+    <section class="reasons-section section-pad">
+      <div class="section-heading light reveal">
+        <p class="eyebrow">Podría escribir cien</p>
+        <h2>10 cosas que amo de ti</h2>
+      </div>
+
+      <div class="reasons-stack">
+        <article class="reason-card reveal"><span>01</span><p>Tu sonrisa y la forma en que cambia por completo cualquier momento.</p></article>
+        <article class="reason-card reveal"><span>02</span><p>La manera tan tuya de hacerme reír cuando menos lo espero.</p></article>
+        <article class="reason-card reveal"><span>03</span><p>Tu forma de mirarme y hacerme sentir que estoy exactamente donde quiero estar.</p></article>
+        <article class="reason-card reveal"><span>04</span><p>Las conversaciones que empiezan con cualquier cosa y terminan significándolo todo.</p></article>
+        <article class="reason-card reveal"><span>05</span><p>Tu personalidad, incluso en esos detalles que quizás tú ni siquiera notas.</p></article>
+        <article class="reason-card reveal"><span>06</span><p>La tranquilidad que siento cuando sé que estás conmigo.</p></article>
+        <article class="reason-card reveal"><span>07</span><p>Nuestros chistes, ocurrencias y momentos que solo nosotros entendemos.</p></article>
+        <article class="reason-card reveal"><span>08</span><p>La manera en que haces que quiera vivir más experiencias a tu lado.</p></article>
+        <article class="reason-card reveal"><span>09</span><p>Todos los recuerdos que ya tenemos y que no cambiaría por nada.</p></article>
+        <article class="reason-card featured reveal"><span>10</span><p>Y, sobre todo, porque eres tú, Nicole. No necesito una razón mejor que esa. ♥</p></article>
+      </div>
+    </section>
+
+    <!-- ================= LETTER ================= -->
+    <section class="letter-section section-pad" id="carta">
+      <div class="letter-visual reveal">
+        <img src="./assets/images/snoopy-carta.svg" alt="Reemplaza esta imagen por tu Snoopy para la carta">
+      </div>
+
+      <div class="letter-copy reveal delay-1">
+        <p class="eyebrow">Hay algo que quiero decirte</p>
+        <h2>Una carta para Nicole</h2>
+        <p>
+          Guardé aquí unas palabras que quería decirte de una manera diferente.
+        </p>
+
+        <button class="primary-btn magnetic" id="openLetter">Abrir la carta 💌</button>
+      </div>
+    </section>
+
+    <!-- ================= MUSIC ================= -->
+    <section class="song-section section-pad">
+      <div class="song-card reveal">
+        <div class="vinyl-wrap">
+          <div class="vinyl" id="vinyl">
+            <div class="vinyl-label">C ♥ N</div>
+          </div>
+        </div>
+
+        <div class="song-info">
+          <p class="eyebrow">Nuestra canción</p>
+          <h2>Una melodía para este momento</h2>
+          <p id="songStatus">
+            Coloca tu canción como <strong>assets/music/nuestra-cancion.mp3</strong>
+            y se reproducirá desde este botón.
+          </p>
+
+          <div class="song-actions">
+            <button class="primary-btn" id="songButton">▶ Reproducir</button>
+            <div class="equalizer" id="equalizer" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL ================= -->
+    <section class="final-section" id="final">
+      <div class="final-bg-hearts" aria-hidden="true">
+        <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+      </div>
+
+      <div class="final-content reveal">
+        <img src="./assets/images/snoopy-final.svg" class="final-image" alt="Reemplaza esta imagen por tu Snoopy final">
+
+        <p class="eyebrow">Una última pregunta…</p>
+        <h2>Nicole</h2>
+        <h3>¿Quieres seguir creando recuerdos conmigo? ♥</h3>
+
+        <div class="choice-area" id="choiceArea">
+          <button class="yes-btn" id="yesBtn">Sí, obviamente ❤️</button>
+          <button class="no-btn" id="noBtn">No 🙄</button>
+        </div>
+
+        <div class="yes-message" id="yesMessage">
+          <div class="yes-heart">♥</div>
+          <h3>Sabía que dirías que sí.</h3>
+          <p>
+            Entonces que esta página sea solo el comienzo de muchas historias más.
+            Te quiero muchísimo, Nicole.
+          </p>
+          <strong>— Cristhofer</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con <span>♥</span> por Cristhofer, solo para Nicole.</p>
+  </footer>
+
+  <!-- ================= LETTER MODAL ================= -->
+  <div class="modal" id="letterModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-letter></div>
+
+    <article class="letter-paper">
+      <button class="modal-close" id="closeLetter" aria-label="Cerrar carta">×</button>
+
+      <div class="paper-lines"></div>
+
+      <p class="letter-to">Para Nicole ♥</p>
+      <h2>Mi amor,</h2>
+
+      <p>
+        Quería hacerte algo que no fuera simplemente un mensaje más. Algo que pudieras abrir,
+        recorrer poco a poco y recordar cada vez que quisieras.
+      </p>
+
+      <p>
+        Gracias por cada conversación, cada sonrisa, cada momento bonito y también por esos
+        días normales que, cuando estoy contigo, dejan de sentirse normales.
+      </p>
+
+      <p>
+        Me gusta pensar que lo nuestro no se resume en una sola fotografía o una sola fecha.
+        Está formado por cientos de pequeños momentos que, juntos, significan muchísimo para mí.
+      </p>
+
+      <p>
+        Quiero seguir sumando lugares, anécdotas, canciones, risas, abrazos y fotografías contigo.
+        Quiero que algún día miremos atrás y sintamos que esta página era apenas uno de los primeros capítulos.
+      </p>
+
+      <p class="letter-highlight">
+        Si algún día vuelves a abrir esto, recuerda algo: eres muy especial para mí, Nicole,
+        y me alegra muchísimo que seas parte de mi vida.
+      </p>
+
+      <div class="letter-signature">
+        <small>Con amor,</small>
+        <strong>Cristhofer ♥</strong>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= SECRET MODAL ================= -->
+  <div class="secret-modal" id="secretModal" aria-hidden="true">
+    <button class="secret-close" id="secretClose">×</button>
+    <div class="secret-box">
+      <span class="secret-heart">♥</span>
+      <p>El secreto es bastante sencillo…</p>
+      <h2>Cada día me gustas un poquito más.</h2>
+      <button class="ghost-btn light-btn" id="secretOkay">Yo también sabía 😌</button>
+    </div>
+  </div>
+
+  <!-- La canción se carga de forma relativa, compatible con GitHub Pages. -->
+  <audio id="music" loop preload="metadata">
+    <source src="./assets/music/nuestra-cancion.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
